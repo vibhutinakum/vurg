@@ -1,0 +1,45 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "sass demo structure",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.1",
+    "gulp-minifier": "^1.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-variables": "^1.2.0",
+    "gulp-sequence": "^1.0.0",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-watch-sequence": "^1.0.0",
+    "node-sass": "^4.11.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.5.4",
+    "@types/mcustomscrollbar": "^2.8.32",
+    "autoprefixer": "^10.0.1",
+    "bootstrap": "^4.5.3",
+    "bootstrap-material-datetimepicker": "^2.7.3",
+    "bootstrap-material-design": "^4.1.3",
+    "gulp-google-webfonts": "^2.1.0",
+    "jq": "^1.7.2",
+    "jquery": "^3.5.1",
+    "jquery.nicescroll": "^3.7.6",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "popper.js": "^1.14.4",
+    "postcss-cli": "^8.1.0",
+    "ripple-js": "^1.4.4",
+    "select2": "^4.1.0-rc.0",
+    "swiper": "^6.3.5"
+  }
+}

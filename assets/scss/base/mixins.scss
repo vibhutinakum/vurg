@@ -1,0 +1,157 @@
+//Tranform
+@mixin translate($transformX, $transformY) {
+	-moz-transform: translate($transformX, $transformY);
+	-o-transform: translate($transformX, $transformY);
+	-ms-transform: translate($transformX, $transformY);
+	-webkit-transform: translate($transformX, $transformY);
+	transform: translate($transformX, $transformY);
+}
+
+@mixin skew($skewx,$skewy) {
+	-moz-transform: skew($skewx,$skewy);
+	-o-transform: skew($skewx,$skewy);
+	-ms-transform: skew($skewx,$skewy);
+	-webkit-transform: skew($skewx,$skewy);
+	transform: skew($skewx,$skewy);
+}
+
+@mixin rotate($rotate) {
+	-moz-transform: rotate($rotate);
+	-o-transform: rotate($rotate);
+	-ms-transform: rotate($rotate);
+	-webkit-transform: rotate($rotate);
+	transform: rotate($rotate);
+}
+
+@mixin rotateX($rotate) {
+	-moz-transform: rotateX($rotate);
+	-o-transform: rotateX($rotate);
+	-ms-transform: rotateX($rotate);
+	-webkit-transform: rotateX($rotate);
+	transform: rotateX($rotate);
+}
+
+@mixin rotateY($rotate) {
+	-moz-transform: rotateY($rotate);
+	-o-transform: rotateY($rotate);
+	-ms-transform: rotateY($rotate);
+	-webkit-transform: rotateY($rotate);
+	transform: rotateY($rotate);
+}
+
+@mixin translateY($transforms) {
+	-moz-transform: translateY($transforms);
+	-o-transform: translateY($transforms);
+	-ms-transform: translateY($transforms);
+	-webkit-transform: translateY($transforms);
+	transform: translateY($transforms);
+}
+
+@mixin translateX($transforms) {
+	-moz-transform: translateX($transforms);
+	-o-transform: translateX($transforms);
+	-ms-transform: translateX($transforms);
+	-webkit-transform: translateX($transforms);
+	transform: translateX($transforms);
+}
+@mixin translateZ($transforms) {
+	-moz-transform: translateZ($transforms);
+	-o-transform: translateZ($transforms);
+	-ms-transform: translateZ($transforms);
+	-webkit-transform: translateZ($transforms);
+	transform: translateZ($transforms);
+}
+@mixin scale($transforms) {
+	-moz-transform: scale($transforms);
+	-o-transform: scale($transforms);
+	-ms-transform: scale($transforms);
+	-webkit-transform: scale($transforms);
+	transform: scale($transforms);
+}
+@mixin transition($transition) {
+	transition: $transition;
+	-o-transition: $transition;
+	-ms-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+@mixin grayscale($filter){
+	filter: grayscale($filter);
+	-webkit-filter: grayscale($filter);
+	-moz-filter: grayscale($filter);
+	-o-filter: grayscale($filter);
+	-ms-filter: grayscale($filter);
+}
+
+@mixin optional-at-root($sel) {
+	@at-root #{if(not &, $sel, selector-append(&, $sel))} {
+		@content;
+	}
+}
+
+//placeholder
+@mixin placeholder {
+	@include optional-at-root('::-webkit-input-placeholder') {
+		@content;
+	}
+
+	@include optional-at-root(':-moz-placeholder') {
+		@content;
+	}
+
+	@include optional-at-root('::-moz-placeholder') {
+		@content;
+	}
+
+	@include optional-at-root(':-ms-input-placeholder') {
+		@content;
+	}
+}
+
+//Border Radius
+@mixin border-radius($radius) {
+	border-top-right-radius: $radius;
+	border-top-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+	border-bottom-right-radius: $radius;
+}
+
+@function strip-unit($num) {
+	@return $num / 10;
+}
+
+@mixin rem-fallback($property, $values...) {
+	$max: length($values);
+	$pxValues: '';
+	$remValues: '';
+
+	@for $i from 1 through $max {
+		$value: strip-unit(nth($values, $i));
+		$pxValues: #{$pxValues + $value*16}px;
+
+		@if $i < $max {
+			$pxValues: #{$pxValues + " "};
+		}
+	} 
+
+	@for $i from 1 through $max {
+		$value: strip-unit(nth($values, $i));
+		$remValues: #{$remValues + $value}rem;
+
+		@if $i < $max {
+			$remValues: #{$remValues + " "};
+		}
+	} 
+
+	//#{$property}: $pxValues; 
+	#{$property}: $remValues; 
+}
+
+//box shadow
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+	-webkit-box-shadow:$top $left $blur $color #{$inset};
+	-moz-box-shadow:$top $left $blur $color #{$inset};
+	box-shadow:$top $left $blur $color #{$inset};
+}
