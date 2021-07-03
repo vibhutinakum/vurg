@@ -1,31 +1,95 @@
-.form-group{
-    margin-bottom: 30px;
-    label{
-        color:$black-shade-1;
-        font-size: 14px;
-        letter-spacing:0.5px;
-        margin-bottom: 10px;
-        font-weight: 600;
+.form-group {
+  margin-bottom: 30px;
+  label {
+    color: $black-shade-1;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .form-control {
+    height: 50px;
+    border: 2px solid $gray;
+    border-radius: 0;
+    @include transition(all 0.5s);
+    &:focus {
+      box-shadow: none;
+      border-color: $primary-color;
     }
-    .form-control{
-        height:50px;
-        border: 2px solid $gray;
-        border-radius: 0; 
-        @include transition(all 0.5s);
-        &:focus{
-            box-shadow: none;
-            border-color: $primary-color;
-        }
-        &::placeholder{
-            font-size: 14px;
-            color: $black;
-            opacity: 0.6;
-            font-weight: 400;
-            transform: scale(1);
-        }   
+    &::placeholder {
+      font-size: 14px;
+      color: $black;
+      opacity: 0.6;
+      font-weight: 400;
+      transform: scale(1);
     }
-    textarea{
-        resize: none;
-        min-height: 100px;
+  }
+  textarea {
+    resize: none;
+    min-height: 100px;
+  }
+}
+.primary-btn {
+  border: 2px solid $white;
+  min-height: 50px;
+  padding: 10px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  @include transition(all 0.5s);
+  &:after {
+    content: "";
+    background-color: $white;
+    left: 0;
+    right: 0;
+    width: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    @include transition(all 0.5s);
+  }
+  &:hover {
+    color: $primary-color;
+    &:after {
+      width: 100%;
     }
+  }
+}
+.secondary-btn {
+  border: 2px solid $primary-color;
+  min-height: 50px;
+  padding: 10px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary-color;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  @include transition(all 0.5s);
+  &:after {
+    content: "";
+    background-color: $primary-color;
+    left: 0;
+    right: 0;
+    width: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    @include transition(all 0.5s);
+  }
+  &:hover {
+    color: $white;
+    &:after {
+      width: 100%;
+    }
+  }
 }

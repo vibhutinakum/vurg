@@ -1,4 +1,8 @@
 jQuery(document).ready(function(e) {
+    AOS.init({
+        duration: 1200,
+    })
+
     var headerHeight = jQuery('header').height();
     if ( jQuery(window).scrollTop() > headerHeight) {
         jQuery('header').addClass("fixed-header");
