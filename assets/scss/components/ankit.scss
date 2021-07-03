@@ -61,22 +61,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../images/banner-image.jpg");
+  background: url("../images/banner-2.jpg");
   background-size: cover;
   background-position: center;
   z-index: 1;
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background-color: $primary-color;
-    z-index: -1;
-  }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   height: 100%;
+  //   width: 100%;
+  //   background-color: $primary-color;
+  //   z-index: -1;
+  // }
   .intro-content {
     padding: 30px 0px;
     .coin-span {
@@ -202,7 +202,9 @@
     animation: moveInBottom 5s ease-out;
     animation-fill-mode: backwards;
 }
-
+.coin-headers{
+  margin-top: 50px;
+}
 @keyframes moveInBottom {
     0% {
         opacity: 0;
@@ -214,3 +216,4 @@
         transform: translateY(0px);
     }
 }
+
