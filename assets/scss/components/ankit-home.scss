@@ -1,0 +1,123 @@
+.payment_method {
+  .payment_method_tabs {
+    text-align: center;
+    ul {
+      justify-content: center;
+    }
+  }
+}
+
+.become_vendor {
+  .coin-feature-box {
+    background-color: $black-shade-1;
+    h4 {
+      font-size: 26px;
+      line-height: 35px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+  }
+  .btn-wrapper {
+    text-align: center;
+    a {
+      background-color: $black-shade-1;
+      &:hover {
+        color: fff !important;
+      }
+    }
+  }
+}
+
+.testimonial {
+  margin-top: 50px;
+  #demo {
+    // background: linear-gradient(112deg, #ffffff 50%, #9F9FFF 50%);
+    background-color: #0f1525;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .carousel-caption {
+    position: initial;
+    z-index: 10;
+    padding: 5rem 8rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 2rem;
+  }
+
+  @media (max-width: 767px) {
+    .carousel-caption {
+      position: initial;
+      z-index: 10;
+      padding: 3rem 2rem;
+      color: #fff;
+      text-align: center;
+      font-size: 0.7rem;
+      font-style: italic;
+      font-weight: bold;
+      line-height: 1.5rem;
+    }
+  }
+
+  .carousel-caption img {
+    width: 6rem;
+    border-radius: 5rem;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 767px) {
+    .carousel-caption img {
+      width: 4rem;
+      border-radius: 4rem;
+      margin-top: 1rem;
+    }
+  }
+
+  #image-caption {
+    font-style: normal;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 767px) {
+    #image-caption {
+      font-style: normal;
+      font-size: 0.6rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  i {
+    background-color: $black-shade-1;
+    padding: 1.4rem;
+  }
+
+  @media (max-width: 767px) {
+    i {
+      padding: 0.8rem;
+    }
+  }
+
+  .carousel-control-prev {
+    justify-content: flex-start;
+  }
+
+  .carousel-control-next {
+    justify-content: flex-end;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    transition: none;
+    opacity: unset;
+  }
+}
+
+.you_can{
+  margin-top: 50px;
+}
