@@ -327,3 +327,39 @@
     }
   }
 }
+
+.sec_5c {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #0b0f1c; 
+  color: #fff;
+  img {
+    width: 80px;
+  }
+  .sec_5b_2 {
+    text-align: center;
+    h3 {
+      margin-bottom: 50px;
+      font-family: Montserrat;
+      font-style: normal;
+      color: #fff;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li {
+        width: auto;
+        text-align: center;
+        margin-right: 30px;
+      }
+    } 
+  }
+}
